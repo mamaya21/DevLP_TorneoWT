@@ -31,6 +31,7 @@ ul {
 
 ul li {
   list-style-type: none;
+  cursor: pointer;
 }
 
 .title {
@@ -47,7 +48,9 @@ ul li {
 }
 
 .container {
+  
   padding: 20px;
+  padding-top: 0px !important;
 }
 
 .collapsible {
@@ -131,7 +134,7 @@ ul li {
 
 .img_tournament
 {
-    padding-top: 35px;
+    padding-top: 0px;
     width: 100%;
 }
 
@@ -186,8 +189,9 @@ ul li {
 @media (min-width: 1440px){
     .img_tournament img
     {
-        max-width: 38%;
+        max-width: 22%;
         height: auto;
+        filter: drop-shadow(0px 10px 20px #fcefa0);
     }
 }
 
@@ -221,4 +225,31 @@ ul li {
     font-family: "titillium";
     color: #ac2b02; 
     text-transform: uppercase
+}
+
+.p__tn01
+{
+  color: #fff;
+  padding-top: 0px !important;
+  font-size: 1.4rem;
+  font-family: "titillium";
+  text-align: center;
+}
+
+
+.p__des01
+{
+  padding-top: 0px !important;
+  text-align: center;
+}
+
+#loading
+{
+  background: #000 
+    url("../images/Logo_final_final.png") no-repeat center center;
+  background-size: 35%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
 }

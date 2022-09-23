@@ -34,47 +34,55 @@
 </head>
 
 <body>
+
+    <div id="loading">
+
+    </div>
+
     <div class="title">
         <div id="img_tournament" class="img_tournament">
-            <img src="images/b_01.png" alt="">
+            <img src="images/logo_bg.png" alt="">
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="container">
         <ul class="collapsible popout" data-collapsible="accordion">
             <li class="active">
-                <div class="collapsible-header active-header"><i class="fa fa-info-circle" aria-hidden="true""></i>Información</div>
-                <div class="collapsible-body" style="display: block;">
+                <div id="header1" class="collapsible-header active-header"><i class="fa fa-info-circle" aria-hidden="true""></i>Información</div>
+                <div id="layer1" class="collapsible-body" style="display: block;">
                     <h2 class="h2__tn01">Llegó el torneo que estabas esperando</h2>
+                    <p class="p__tn01">Esta es la competencia que busca enfrentar a los jugadores más destacados por más de 20 MIL DÓLARES EN PREMIOS.</p>
+                    <p class="p__des01"><a onclick="selectLayer(5)"><img src="images/main_btn_register.png" width="433" height="68" alt="Register"></a></p>
+                    <p class="p__tn01">Inscríbete vía online en esta web o vía presencial revisando</p>
                 </div>
             </li>
             <li class="">
-                <div class="collapsible-header noactive-header"><i class="fa fa-question-circle" aria-hidden="true"></i>¿Que es la copa wolfteam 2022?</div>
-                <div class="collapsible-body" style="display: none;">
+                <div id="header2" class="collapsible-header noactive-header"><i class="fa fa-question-circle" aria-hidden="true"></i>¿Que es la copa wolfteam 2022?</div>
+                <div id="layer2" class="collapsible-body" style="display: none;">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </li>
             <li class="">
-                <div class="collapsible-header noactive-header"><i class="fa fa-calendar" aria-hidden="true"></i>Fechas del torneo</div>
-                <div class="collapsible-body" style="display: none;">
+                <div id="header3" class="collapsible-header noactive-header"><i class="fa fa-calendar" aria-hidden="true"></i>Fechas del torneo</div>
+                <div id="layer3" class="collapsible-body" style="display: none;">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </li>
             <li class="">
-                <div class="collapsible-header noactive-header"><i class="fa fa-file-text-o" aria-hidden="true"></i>Bases y reglas del torneo</div>
-                <div class="collapsible-body" style="display: none;">
+                <div id="header4" class="collapsible-header noactive-header"><i class="fa fa-file-text-o" aria-hidden="true"></i>Bases y reglas del torneo</div>
+                <div id="layer4" class="collapsible-body" style="display: none;">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </li>
             <li class="">
-                <div class="collapsible-header noactive-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Inscribite ahora</div>
-                <div class="collapsible-body" style="display: none;">
+                <div id="header5" class="collapsible-header noactive-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Inscribite ahora</div>
+                <div id="layer5" class="collapsible-body" style="display: none;">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </li>
             <li class="">
-                <div class="collapsible-header noactive-header"><i class="fa fa-trophy" aria-hidden="true"></i>Gran Final</div>
-                <div class="collapsible-body" style="display: none;">
+                <div id="header6" class="collapsible-header noactive-header"><i class="fa fa-trophy" aria-hidden="true"></i>Gran Final</div>
+                <div id="layer6" class="collapsible-body" style="display: none;">
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </li>
@@ -83,9 +91,41 @@
 
     <div>
         <video id="video-background" muted loop autoplay preload="auto" playsinline>
-            <source src="http://img.softnyx.com/video/bro.mp4" type="video/mp4">
+            <source src="video/bro.mp4" type="video/mp4">
         </video>
     </div>
+
+    <script>
+        var loader = document.getElementById("loading");
+        window.addEventListener("load", function(){
+            setTimeout(function(){
+            loader.style.display = 'none';
+            }, 2500);
+        });
+
+        
+        function selectLayer(LayerNo) {
+            debugger;
+            var count = $("#container li").length;
+            $("#container li").removeClass('active');
+            $("#container li").eq(LayerNo - 1).addClass('active');           
+
+            for (var i = 0; i < count; i++) { 
+                $("#header" + (i + 1)).removeClass('active-header');
+                $("#header" + (i + 1)).removeClass('noactive-header');                               
+                $("#header" + (i + 1)).addClass('noactive-header');
+                $("#layer" + (i + 1)).hide();
+            }
+
+            $("#header" + LayerNo).removeClass('noactive-header');
+            $("#header" + LayerNo).addClass('active-header');
+            $("#layer" + LayerNo).show();
+
+            console.log(LayerNo);
+
+        }
+
+    </script>
 
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>

@@ -18,3 +18,5 @@ $(".collapsible li").click(function () {
   }
   //$(this).find('.collapsible-body').slideToggle(500); //change display property
 });
+
+
