@@ -25,13 +25,36 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
+a {
+  cursor:pointer;
+  text-decoration:none
+ }
+ 
+ a:link {
+  color: #CCC;
+ }
+ 
+ a:hover {
+  color: #F90;
+ }
+ 
+ a:active {
+  color: #CCC;
+ }
+ 
+ a {
+  border: none;
+  border:0;
+ }
+ 
+
 ul {
   padding: 0;
 }
 
 ul li {
   list-style-type: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .title {
@@ -87,7 +110,7 @@ ul li {
 
 .collapsible-header {
   display: block;
-  cursor: pointer;
+  /* cursor: pointer; */
   height: 4rem;
   line-height: 4rem;
   padding: 0 1rem;
@@ -218,7 +241,8 @@ ul li {
 }
 
 /*ESTILOS PARA LOS DIVS INTERIORES*/
-.h2__tn01{
+.h2__tn01
+{
     text-align: center;
     font-size: 1.8rem;
     padding: 15px 30px;
@@ -227,13 +251,51 @@ ul li {
     text-transform: uppercase
 }
 
+.h2__tn02
+{
+  text-align: justify;
+  font-size: 1.8rem;
+  padding: 15px 30px;
+  font-family: "titillium";
+  color: #ac2b02; 
+  text-transform: uppercase
+}
+
+.h2__tn03
+{
+  text-align: justify;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  font-family: "titillium";
+  color: #ac2b02; 
+}
+
+.h2__tn04
+{
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 15px 30px;
+  font-family: "titillium";
+  color: #ac2b02; 
+}
+
 .p__tn01
+{
+  color: #fff;
+  padding-top: 0px !important;
+  padding-bottom: 10px !important;
+  font-size: 1.4rem;
+  font-family: "titillium";
+  text-align: center;
+}
+
+.p__tn02
 {
   color: #fff;
   padding-top: 0px !important;
   font-size: 1.4rem;
   font-family: "titillium";
-  text-align: center;
+  text-align: justify;
 }
 
 
@@ -246,7 +308,7 @@ ul li {
 #loading
 {
   background: #000 
-    url("../images/Logo_final_final.png") no-repeat center center;
+    url("../images/b_01.gif") no-repeat center center;
   background-size: 35%;
   height: 100vh;
   width: 100%;
